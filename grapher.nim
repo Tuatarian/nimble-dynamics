@@ -49,8 +49,8 @@ while not WindowShouldClose():
     var y = 0.1f
     for z in 0..totY:
         for j in 0..totX:
-            y = yscale[0] + i
-            xi = xscale[0] + i
+            y = float yscale[0] + z
+            xi = float xscale[0] + j
             for i in 0..100:
                 let y1 = RungeKutta4(diffeq, y, dt)
                 let v1 = makevec2(xi, y) * scalevec + gOriginU
